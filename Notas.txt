@@ -22,3 +22,10 @@ django-admin startproject myapp
 
 7.- levantar el servidor
 python manage.py runserver
+
+8.- en archito de settings hay que poner el DEBUG en false para que no se muestre cuando ya este montado la falla
+
+9.- en urls.py agregar biblioteca 
+from django.http import HttpResponse #agregar biblioteca para hacer impresion de datos
+
+10.- generamos un archivo views en my_app para generar las vistas de mi pagnia web

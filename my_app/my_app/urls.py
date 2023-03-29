@@ -14,8 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls    import path
+from django.http    import HttpResponse #agregar biblioteca para hacer impresion de datos
+from .          import views         #importamos la funcion hola desde el modulo de vistas
+
+
 
 urlpatterns = [
+    path('hola/', views.hola),
+    path('verificar/<nombre>/<int:edad>/', views.verificar),
     path('admin/', admin.site.urls),
+    
 ]
