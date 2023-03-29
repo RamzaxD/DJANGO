@@ -1,0 +1,24 @@
+1.- Crear un entorno virtual:
+
+py -m venv "Nombre del entorno virtual"
+
+2.- Activar entorno virtual:
+
+entrar a la carpeta del entorno virtual, carpeta scripts, en la ventana poner el archivo Activate.ps1 (para windows)
+
+3.- Ver mis bibliotecas:
+pip list
+
+4.- Actualizar el pip:
+ python.exe -m pip install --upgrade pip
+
+5.- installar django
+
+pip install django
+
+6.- crear proyecto en django
+
+django-admin startproject myapp
+
+7.- levantar el servidor
+python manage.py runserver
