@@ -1,6 +1,5 @@
-from django.urls import path, incluede
-from django.http import HttpResponse
+from django.urls import path
 from . import views
 urlpatterns = [
-    path('perfil/', views.perfil),
+    path('', views.saludo, name='saludo_perfil'), 
 ]

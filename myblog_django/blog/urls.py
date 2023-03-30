@@ -3,5 +3,5 @@ from django.http import HttpResponse
 from . import views
 
 urlpatterns = [
-    path('blog/', views.blog),
+    path('', views.saludo, name = 'saludo_blog'),
 ]

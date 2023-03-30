@@ -1,7 +1,7 @@
-from django.urls import path, incluede
-from django.http import HttpResponse
+from django.urls import path
+#from django.http import HttpResponse
 from . import views
 
 urlpatterns = [
-    path('core/', views.core),
+    path('', views.saludo, name='saludo_core'),
 ]

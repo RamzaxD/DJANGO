@@ -2,5 +2,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
-def core (request):
-    return HttpResponse(f"Hola desde mi core")
+def saludo(request):
+    return HttpResponse("<h1>Hola desde mi core</h1>")
