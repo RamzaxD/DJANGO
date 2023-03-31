@@ -21,6 +21,7 @@ from .                  import views
 urlpatterns = [
     #BLOG PRINCIPAL PORTADA
     path('',                views.principal, name="portada_principal"),
+    path('<int:id>',       views.post,      name='post'),
     
     #URLS PARA NUCLEO INCLUYE todo
     path('core_saludo/',     include('core.urls')),

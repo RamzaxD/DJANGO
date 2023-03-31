@@ -31,6 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #Aquí instalaremos nuestras aplicaciones
+    #py manage.py makemigrations nombre_APP
+    'core.apps.CoreConfig',     #'nombre_de_la_aplicacion.apps.NombreClass',
+    'blog.apps.BlogConfig',     
+    'perfil.apps.PerfilConfig',
+
+    #Aplicaciones de DJANGO
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
