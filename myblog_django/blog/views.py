@@ -11,15 +11,15 @@ def saludo(request):
     #posteo.delete()
     post_numero = 0
     total_post = len(posteo)
-    print(f"total de post que hay{total_post}")
+    print(f"total de post que hay: {total_post}")
     for post_numero in range(total_post):
         print(f"este es el Objeto post: {posteo[post_numero]}")
         print(f"Nombre: {(posteo[post_numero].tittle)}")
         print(f"id: {(posteo[post_numero].id)} ")
-    return HttpResponse(posteo[0].tittle)#muestra titulo del post que se encuentra en el lugar 0 de la lista de objetos
+    #return HttpResponse(posteo[0].tittle)#muestra titulo del post que se encuentra en el lugar 0 de la lista de objetos
     #print (Post.objects.all()) #Muestra los objetos de la lista
     #posteo = [int(n) for n in range (posteo).split(',')]
-    #return HttpResponse(posteo)
+    return HttpResponse(posteo)
 
 def post(request, id): #toma el pedido y el id del blog
     posteo = Post.objects.get(id = id)

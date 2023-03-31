@@ -6,3 +6,7 @@ class Project (models.Model):
     description = models.TextField()
     created     = models.DateTimeField(auto_now_add=True) #Añade la fecha de ahora de la creacion del post
     update      = models.DateTimeField(auto_now=True) #Obtener la fecha de actualización
+
+    #Para que aparezca con el nombre del titulo el objeto:
+    def __str__(self):
+        return self.tittle

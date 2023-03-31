@@ -7,8 +7,8 @@ from .models import Project
 # Create your views here.
 def saludo(request):
     #Generar registros en la base de datos
-    #project1 = Project(tittle = "Proyecto 1", description = "Este proyecto abarca sobre weas")#Generando un objeto
-    #project1.save()#Guardar el objeto en la base de datos
+    #proyecto1 = Project.objects.create(tittle = "Proyecto 1", description = "Este proyecto abarca sobre weas")#Generando un objeto
+    #proyecto1.save()#Guardar el objeto en la base de datos
 
     #project2 = Project(tittle = "Proyecto 2", description = "Este proyecto abarca sobre weas2")#Generando un objeto
     #project2.save()#Guardar el objeto en la base de datos
@@ -19,5 +19,5 @@ def saludo(request):
     projects = Project.objects.all()
     #projects.delete()#borrar contenido
     print (projects)
-    #return HttpResponse(projects)
-    return HttpResponse(projects.values())
+    return HttpResponse(projects)
+    #return HttpResponse(projects.values())

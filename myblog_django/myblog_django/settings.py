@@ -32,7 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #Aquí instalaremos nuestras aplicaciones
-    #py manage.py makemigrations nombre_APP
+    #py manage.py makemigrations nombre_APP ->Crea en sql de lo que se migrara a la base de datos
+    #py manage.py migrate blog -> agregar a la base de datos
     'core.apps.CoreConfig',     #'nombre_de_la_aplicacion.apps.NombreClass',
     'blog.apps.BlogConfig',     
     'perfil.apps.PerfilConfig',
@@ -112,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 

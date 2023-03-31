@@ -9,3 +9,7 @@ class Post(models.Model): #Generando una clase con herencia de una clase. En el 
     content     = models.TextField()
     created     = models.DateTimeField(auto_now_add=True) #Añade la fecha de ahora de la creacion del post
     update      = models.DateTimeField(auto_now=True) #Obtener la fecha de actualización
+
+#Para que aparezca con el nombre del titulo el objeto:
+    def __str__(self):
+        return self.tittle
