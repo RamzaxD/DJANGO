@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #ckeditor
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Media Files (Imagenes)
+MEDIA_ROOT = BASE_DIR /'media' #Configuracion de ruta de archivos multimedia
+MEDIA_URL = '/media/' #Donde se guardaran nuestras imagenes

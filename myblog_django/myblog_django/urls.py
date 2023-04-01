@@ -18,6 +18,10 @@ from django.urls        import path, include
 from .                  import views
 #from django.http import HttpResponse
 
+#Django settings
+from django.conf import settings #importando las configuraciones de django para las image roots
+from django.conf.urls.static import static #importando los archivos estaticos
+
 urlpatterns = [
     #BLOG PRINCIPAL PORTADA
     path('',                views.principal, name="portada_principal"),
@@ -35,4 +39,4 @@ urlpatterns = [
     #admin
     #para crear super usuario: py .\manage.py createsuperuser
     path('admin/',          admin.site.urls),
-]
+] + static (settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) #Ruta de Url y archivos estaticos
